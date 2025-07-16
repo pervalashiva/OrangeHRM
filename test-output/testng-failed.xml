@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.TC003_AddEmployee">
+      <class name="testCases.TC001_LoginPage">
         <methods>
-          <include name="setup"/>
           <include name="tearDown"/>
-          <include name="verivy_addEmployee"/>
+          <include name="setup"/>
+          <include name="verify_login"/>
         </methods>
-      </class> <!-- testCases.TC003_AddEmployee -->
+      </class> <!-- testCases.TC001_LoginPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

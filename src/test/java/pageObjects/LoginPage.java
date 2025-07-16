@@ -23,6 +23,12 @@ WebElement userLogin;
 @FindBy(css = "div.oxd-brand-banner img")
 WebElement brandLogo;
 
+@FindBy(xpath = "//span[@class='oxd-userdropdown-tab']")
+WebElement dlog;
+
+@FindBy(xpath = "//a[normalize-space()='Logout']")
+WebElement logout;
+
 public void userName(String username)
 {
 	usernameField.sendKeys(username);
@@ -36,11 +42,17 @@ public void userPassword(String password)
 
 public void userLogin()
 {
-	userLogin.click();
+	userLogin.click();	
 }
 
 public boolean isLogoDisplayed() {
     return brandLogo.isDisplayed();
+}
+
+public void Logout()
+{
+	dlog.click();
+	logout.click();
 }
 
 }
