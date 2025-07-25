@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-17T10:06:46 IST" name="Suite" finished-at="2025-07-17T10:06:54 IST" duration-ms="7485">
+  <suite started-at="2025-07-26T02:10:47 IST" name="Suite" finished-at="2025-07-26T02:10:59 IST" duration-ms="11995">
     <groups>
     </groups>
-    <test started-at="2025-07-17T10:06:46 IST" name="Test" finished-at="2025-07-17T10:06:54 IST" duration-ms="7485">
+    <test started-at="2025-07-26T02:10:47 IST" name="Test" finished-at="2025-07-26T02:10:59 IST" duration-ms="11995">
       <class name="testCases.TC001_LoginPage">
-        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC001_LoginPage@70325e14]" started-at="2025-07-17T10:06:47 IST" name="setup" finished-at="2025-07-17T10:06:52 IST" duration-ms="5101" status="PASS">
+        <test-method is-config="true" signature="setup(java.lang.String,java.lang.String)[pri:0, instance:testCases.TC001_LoginPage@26275bef]" started-at="2025-07-26T02:10:47 IST" name="setup" finished-at="2025-07-26T02:10:55 IST" duration-ms="8250" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,11 +23,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verify_login()[pri:0, instance:testCases.TC001_LoginPage@70325e14]" started-at="2025-07-17T10:06:52 IST" name="verify_login" finished-at="2025-07-17T10:06:54 IST" duration-ms="1995" status="PASS">
+        <test-method signature="verify_login()[pri:0, instance:testCases.TC001_LoginPage@26275bef]" started-at="2025-07-26T02:10:55 IST" name="verify_login" finished-at="2025-07-26T02:10:58 IST" duration-ms="2765" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verify_login -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC001_LoginPage@70325e14]" started-at="2025-07-17T10:06:54 IST" name="tearDown" finished-at="2025-07-17T10:06:54 IST" duration-ms="356" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC001_LoginPage@26275bef]" started-at="2025-07-26T02:10:58 IST" name="tearDown" finished-at="2025-07-26T02:10:59 IST" duration-ms="917" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

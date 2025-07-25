@@ -80,4 +80,6 @@ jobs:
 
       - name: Run Selected Test Class
         if: ${{ github.event.inputs.run_mode == 'single-class' }}
-        run: mvn test -Dtest=${{ github.event.inputs.test_class }}
+        run: |
+          echo "Running selected test class: ${{ github.event.inputs.test_class }}"
+          mvn test -Dtest="${{ github.event.inputs.test_class }}"
