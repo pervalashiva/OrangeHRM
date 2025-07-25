@@ -72,18 +72,17 @@
             </plugin>
 
             <!-- Maven Surefire Plugin for TestNG -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.5.3</version>
-                <configuration>
-                    <!-- Correct the tag name here -->
-                    <suiteXmlFiles>
-                        <!-- Ensure this file exists -->
-                        <suiteXmlFile>master.xml</suiteXmlFile> <!-- Correct the file name -->
-                    </suiteXmlFiles>
-                </configuration>
-            </plugin>
+			<plugin>
+			  <groupId>org.apache.maven.plugins</groupId>
+			  <artifactId>maven-surefire-plugin</artifactId>
+			  <version>3.5.3</version>
+			  <configuration>
+			    <suiteXmlFiles>
+			      <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
+			    </suiteXmlFiles>
+			  </configuration>
+			</plugin>
+
         </plugins>
     </build>
   

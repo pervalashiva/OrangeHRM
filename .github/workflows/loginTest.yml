@@ -1,0 +1,83 @@
+name: OrangeHRM CI Pipeline
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_mode:
+        description: 'Run Mode (testng-suite or specific class)'
+        required: true
+        type: choice
+        options:
+          - testng-suite
+          - single-class
+        default: single-class
+
+      test_class:
+        description: 'Full class name to run (default: testCases.TC001_LoginPage)'
+        required: false
+        default: testCases.TC001_LoginPage
+        type: choice
+        options:
+          - testCases.TC001_LoginPage
+          - testCases.TC002_addUser
+          - testCases.TC003_AddEmployee
+          - testCases.TC004_LoginDDT
+
+jobs:
+  build:
+    name: Build Project
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Java 18
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 18
+
+      - name: Install Chrome
+        run: choco install googlechrome -y
+
+      - name: Set Chrome Path
+        run: echo "CHROME_BIN=C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe" >> $env:GITHUB_ENV
+
+      - name: Build with Maven
+        run: mvn clean compile
+
+  deploy:
+    name: Simulate Deployment
+    runs-on: windows-latest
+    needs: build
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Simulated Deployment
+        run: echo "Deployment simulated."
+
+  test:
+    name: Run Tests
+    runs-on: windows-latest
+    needs: deploy
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Java 18
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 18
+
+      - name: Run TestNG Suite (master.xml)
+        if: ${{ github.event.inputs.run_mode == 'testng-suite' }}
+        run: mvn test -DsuiteXmlFile=master.xml
+
+      - name: Run Selected Test Class (Default = TC001_LoginPage)
+        if: ${{ github.event.inputs.run_mode == 'single-class' }}
+        run: mvn -Dtest=${{ github.event.inputs.test_class }} test 
