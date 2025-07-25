@@ -29,7 +29,7 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout Code
         uses: actions/checkout@v3
 
       - name: Set up Java 18
@@ -38,10 +38,10 @@ jobs:
           distribution: temurin
           java-version: 18
 
-      - name: Install Chrome
+      - name: Install Chrome (for Selenium)
         run: choco install googlechrome -y
 
-      - name: Set Chrome Path
+      - name: Add Chrome path to ENV
         run: echo "CHROME_BIN=C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe" >> $env:GITHUB_ENV
 
       - name: Build with Maven
@@ -76,10 +76,12 @@ jobs:
 
       - name: Run TestNG Suite (master.xml)
         if: ${{ github.event.inputs.run_mode == 'testng-suite' }}
-        run: mvn test -DsuiteXmlFile=master.xml
+        run: |
+          echo "Running full suite: master.xml"
+          mvn test -DsuiteXmlFile=src/test/resources/master.xml
 
       - name: Run Selected Test Class
         if: ${{ github.event.inputs.run_mode == 'single-class' }}
         run: |
           echo "Running selected test class: ${{ github.event.inputs.test_class }}"
-          mvn test -Dtest=${{ github.event.inputs.test_class }}
+          mvn test -Dtest="${{ github.event.inputs.test_class }}"
