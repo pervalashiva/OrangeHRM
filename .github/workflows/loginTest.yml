@@ -13,7 +13,7 @@ on:
         default: single-class
 
       test_class:
-        description: 'Full class name to run (default: testCases.TC001_LoginPage)'
+        description: 'Full class name to run'
         required: false
         default: testCases.TC001_LoginPage
         type: choice
@@ -80,4 +80,4 @@ jobs:
 
       - name: Run Selected Test Class (Default = TC001_LoginPage)
         if: ${{ github.event.inputs.run_mode == 'single-class' }}
-        run: mvn -Dtest=${{ github.event.inputs.test_class }} test 
+        run: mvn -Dtest=${{ github.event.inputs.test_class }} test
