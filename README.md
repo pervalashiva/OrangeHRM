@@ -19,31 +19,13 @@ This project is a complete automation testing framework built using **Java**, **
 
 ---
 
-## 📂 Project Structure
-├── src
-│ ├── main
-│ └── test
-│ ├── java
-│ │ └── testCases
-│ │ ├── TC001_Login.java
-│ │ ├── TC002_LoginWithDDT.java
-│ │ ├── TC003_AddEmployee.java
-│ │ └── TC004_AddUser.java
-│ └── resources
-│ └── master.xml
-├── pom.xml
-└── .github
-└── workflows
-└── test-automation.yml
----
-
 ## 🚀 How It Works with GitHub Actions
 
 - Workflow is triggered via `workflow_dispatch` (manual trigger with input) or can be adapted to run on `push` or `pull_request`.
 - Automatically:
   1. Sets up Java & Chrome
   2. Builds the Maven project
-  3. Runs specified test(s) from the `testng.xml` suite or main class
+  3. Runs specified test(s) from the `master.xml` suite
 - Parallel test execution can be enabled via TestNG configuration.
 
 ---
@@ -81,10 +63,10 @@ GitHub Actions (CI/CD)
 ExtentReports (optional for reporting)
 ## 📸Test Exicution using git Actions Screenshots
 
-### 🔄 GitHub Actions Test Triggered
 ![GitHub Actions Login Test](screenshots/LoginGitActions.jpeg)
 
-### 🧪 TestNG Test Executed via Build
 ![Login Test Build Success](screenshots/LoginTestingBuild.jpeg)
+<img src="screenshots/LoginGitActions.jpeg" alt="GitHub Actions Login Test" width="600"/>
+
 
 
