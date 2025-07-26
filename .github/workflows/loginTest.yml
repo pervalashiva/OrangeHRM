@@ -78,8 +78,7 @@ jobs:
         if: ${{ github.event.inputs.run_mode == 'testng-suite' }}
         run: |
           echo "Running suite: master.xml"
-          mvn test -DsuiteXmlFile=src/test/resources/master.xml
-
+          mvn test "-DsuiteXmlFile=src/test/resources/master.xml"
 
       - name: Run Selected Test Class
         if: ${{ github.event.inputs.run_mode == 'single-class' }}
