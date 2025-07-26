@@ -34,7 +34,7 @@ This project is a complete automation testing framework built using **Java**, **
 
 To run tests from your local machine:
 
-```bash
+
 # Run full suite
 mvn clean test -DsuiteXmlFile=src/test/resources/master.xml
 
