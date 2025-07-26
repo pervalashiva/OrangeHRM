@@ -47,7 +47,7 @@ Allows manual selection of test class via UI
 
 Runs on Windows runners with Java and Chrome pre-configured
 
-📌 Tech Stack
+ Tech Stack
 Java 11 / Java 18
 
 Selenium WebDriver
@@ -61,12 +61,14 @@ Apache POI (for Excel DDT)
 GitHub Actions (CI/CD)
 
 ExtentReports (optional for reporting)
-## 📸Test Exicution using git Actions Screenshots
+## Test Exicution using git Actions Screenshots
 
-![GitHub Actions Login Test](screenshots/LoginGitActions.jpeg)
-
-![Login Test Build Success](screenshots/LoginTestingBuild.jpeg)
+<h3> GitHub Actions Login Test</h3>
 <img src="screenshots/LoginGitActions.jpeg" alt="GitHub Actions Login Test" width="600"/>
+
+<h3> Login Test Build Success</h3>
+<img src="screenshots/LoginTestingBuild.jpeg" alt="Login Test Build Success" width="600"/>
+
 
 
 
