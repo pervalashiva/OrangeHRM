@@ -8,11 +8,10 @@
 
 
   <test  name="chromeTest">
-  <parameter name = "os" value = "Window" />
+  <parameter name = "os" value = "Windows" />
   <parameter name = "browser" value = "chrome" />
     <classes>
     <!--  <class name="testCases.TC002_addUser"/> -->
-     	 <class name="testCases.BaseClass"/>
     <!--    <class name="testCases.TC003_AddEmployee"/> -->
  		   <class name="testCases.TC001_LoginPage"/>
     </classes>
@@ -20,11 +19,10 @@
   
   
    <test  name="edgeTest">
-  <parameter name = "os" value = "Window" />
+  <parameter name = "os" value = "Windows" />
   <parameter name = "browser" value = "edge" />
     <classes>
     <!--  <class name="testCases.TC002_addUser"/> -->
-     	 <class name="testCases.BaseClass"/>
     <!--    <class name="testCases.TC003_AddEmployee"/> -->
  		   <class name="testCases.TC001_LoginPage"/>
     </classes>
@@ -32,11 +30,10 @@
   
   
    <test  name="firefoxTest">
-  <parameter name = "os" value = "Window" />
+  <parameter name = "os" value = "Windows" />
   <parameter name = "browser" value = "firefox" />
     <classes>
     <!--  <class name="testCases.TC002_addUser"/> -->
-     	 <class name="testCases.BaseClass"/>
     <!--    <class name="testCases.TC003_AddEmployee"/> -->
  		   <class name="testCases.TC001_LoginPage"/>
     </classes>

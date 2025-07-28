@@ -11,12 +11,12 @@ public class LoginPage extends BasePage {
 		
 	}
 	
-@FindBy(xpath = "//input[@placeholder='Username']")
+@FindBy(xpath = "//input[@name='username']")
 WebElement usernameField;
 
-@FindBy(xpath = "//input[@placeholder='Password']")
+@FindBy(xpath = "//input[@name='password']")
 WebElement userpassword;
-
+		
 @FindBy(xpath = "//button[normalize-space()='Login']")
 WebElement userLogin;
 

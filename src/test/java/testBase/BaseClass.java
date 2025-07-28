@@ -10,6 +10,7 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import java.io.FileReader;
@@ -28,7 +29,7 @@ public class BaseClass {
     
     @BeforeClass
     @Parameters({"os", "browser"})
-    public void setup(String os, String br) throws Exception {
+    public void setup(@Optional("windows") String os, @Optional("chrome") String br) throws Exception {
     	
     	//Loading config.properties files
     	

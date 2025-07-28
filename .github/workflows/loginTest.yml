@@ -22,6 +22,7 @@ on:
           - testCases.TC002_addUser
           - testCases.TC003_AddEmployee
           - testCases.TC004_LoginDDT
+          - testCases.TC005_addJobTitle
 
 jobs:
   build:

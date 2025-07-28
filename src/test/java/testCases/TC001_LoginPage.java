@@ -17,6 +17,7 @@ class TC001_LoginPage extends BaseClass {
 		 lp.userName("Admin");
 		 lp.userPassword("admin123");
 		 lp.userLogin();
+		 
 		 Assert.assertTrue(lp.isLogoDisplayed(), "Logo is not displayed.");
 		 //lp.Logout();
 		 logger.info("***************verify login is end********************");
